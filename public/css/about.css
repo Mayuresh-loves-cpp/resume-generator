@@ -1,0 +1,50 @@
+.bg-img {
+    /* The image used */
+    /* background-image: url("http://3.bp.blogspot.com/-1a0jgkP4wPc/UGmoLNT3ViI/AAAAAAAACbU/Mic6FhbA2bA/s1600/ForestWaterfall-long+goodbye.png"); */
+
+    min-height: 380px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Needed to position the navbar */
+    position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+    position: absolute;
+    margin: 20px;
+    width: auto;
+}
+
+/* The navbar */
+.topnav {
+    overflow: visible;
+    background-color: #333;
+}
+
+/* Navbar links */
+.topnav a {
+    float: left;
+    color: #474747;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 50px;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    height: 1700px;
+    background-image: linear-gradient(0deg, rgb(186, 186, 186), rgb(255, 255, 255));
+}

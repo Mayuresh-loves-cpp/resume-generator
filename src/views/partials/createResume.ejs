@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your Resume</title>
+    <link rel="stylesheet" href="/css/createResume.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://maxcdn.icons8.com/Share/icon/ios7/Business/open_resume1600.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="bg-img">
+        <div class="container">
+            <div class="topnav">
+                <a href="/">Home</a>
+                <a href="/createResume">Create Resume</a>
+                <a href="/getResume">Get Resume</a>
+                <a href="/about">About</a>
+            </div>
+        </div>
+    </div>
+    <div class="pre-form">
+        <form action="createResume.html" onsubmit="alert('Information saved');return false">
+            <div class="name">
+                <label for="firstName">First Name</label><input type="text" name="firstName" id="firstName" required>
+                <label for="lastName">Last Name</label><input type="text" name="lastName" id="lastName" required>
+            </div>
+
+            <div class="name">
+                <label for="emailID">Email ID</label><input type="email" name="emailID" id="emailID" required>
+            </div>
+            
+            <div class="name">
+                <label for="phoneNum">Phone Number</label><input type="text" name="phoneNum" id="phoneNum" required>
+            </div>
+            
+            <div class="name">
+                <label for="objective">Your Objective</label><input type="text" name="objective" id="objective"
+                    required>
+            </div>
+            
+            <div class="name">
+                <label for="university">University Name</label><input type="text" name="university" id="university"
+                    required>
+                <label for="degree">Degree</label><input type="text" name="degree" id="degree" required>
+            </div>
+            
+            <div class="name">
+                <label for="degYear">When you recived your Degree</label><input type="date" name="degYear" id="degYear"
+                    required>
+            </div>
+
+            <div class="submitbtn">
+                <input type="submit" value="SAVE INFORMATION" class="btn">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
