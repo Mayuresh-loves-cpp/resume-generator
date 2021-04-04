@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <script src="/createResume/addSchool"></script>
     <div class="bg-img">
         <div class="container">
             <div class="topnav">
@@ -51,12 +52,19 @@
 
                 <h2>Your Educational Information</h2>
 
-                <div class="name">
-                    <label for="university">University Name</label><input type="text" name="university" id="university"
-                        required>
+                <div class="eduInfo">
+                    <ol type="1" id="eduInfoList">
+                        <li id="eduInfo1">
+                            <label for="university">University Name</label><input type="text" name="university"
+                                id="university" required>
+                            <input type="button" value="add" id="addSchool" class="addschool">
+                            <br>
+                            <br>
+                            <label for="degree">Degree</label><input type="text" name="degree" id="degree" required>
+                        </li>
+                    </ol>
                     <br>
-                    <br>
-                    <label for="degree">Degree</label><input type="text" name="degree" id="degree" required>
+
                 </div>
 
                 <div class="name">
@@ -72,5 +80,20 @@
         </form>
     </div>
 </body>
+<footer>
+    <script src="/createResume/addSchool"></script>
+    <!-- /*type="text/javascript"*/ -->
+</footer>
+<!-- <script>
+    // function addSchool(e) {
+    //     console.log("hello from addSchool function")
+    //     var ol = document.getElementById("eduInfoList")
+    //     var li = document.getElementById("eduInfoListEle")
+    //     var newEle = document.createElement(li)
+    //     newEle.setAttribute("")
+    //     ol.appendChild(newEle)
+    // }
+    console.log("running script")
+</script> -->
 
 </html>
