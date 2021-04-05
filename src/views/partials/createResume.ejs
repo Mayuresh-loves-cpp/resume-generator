@@ -14,7 +14,9 @@
 </head>
 
 <body>
-    <script src="/createResume/addSchool"></script>
+    <!-- importing scripts -->
+    <!-- <script src="/createResume/addSchool"></script> -->
+    <!-- main structure -->
     <div class="bg-img">
         <div class="container">
             <div class="topnav">
@@ -25,6 +27,7 @@
             </div>
         </div>
     </div>
+
     <div class="pre-form">
         <form action="createResume.html" onsubmit="alert('Information saved');return false">
             <div class="cardbg">
@@ -32,8 +35,7 @@
                 <div class="name">
                     <label for="firstName">First Name</label><input type="text" name="firstName" id="firstName"
                         required>
-                    <br>
-                    <br>
+                    <p></p>
                     <label for="lastName">Last Name</label><input type="text" name="lastName" id="lastName" required>
                 </div>
 
@@ -58,9 +60,10 @@
                             <label for="university">University Name</label><input type="text" name="university"
                                 id="university" required>
                             <input type="button" value="add" id="addSchool" class="addschool">
-                            <br>
-                            <br>
-                            <label for="degree">Degree</label><input type="text" name="degree" id="degree" required>
+                            <p></p>
+                            <label for="degree" id="edudeg">Degree</label><input type="text" name="degree" id="degree"
+                                required>
+                            <input type="button" value="remove" id="removeSchool" class="addschool">
                         </li>
                     </ol>
                     <br>
@@ -72,28 +75,34 @@
                         id="degYear" required>
                 </div>
 
+                <h2>Work Experience</h2>
+
+                <div class="workExp">
+                    <ol type="1" id="workExpList">
+                        <li id="workExpEle1">
+                            <label for="organization">Organization</label><input type="text" name="organization">
+                            <input type="button" value="add" id="addWork" class="addWorkExp">
+                            <p></p>
+                            <label for="position" id="positionLable">Position</label><input type="text" name="position">
+                            <input type="button" value="remove" id="removeWork" class="addWorkExp">
+                            <p></p>
+                            <label for="from">From</label><input type="date" name="from">
+                            <p></p>
+                            <label for="till">Till</label><input type="date" name="till">
+                        </li>
+                    </ol>
+                </div>
+
                 <div class="submitbtn">
                     <input type="submit" value="SAVE INFORMATION" class="btn">
                 </div>
             </div>
-
         </form>
     </div>
 </body>
+
 <footer>
     <script src="/createResume/addSchool"></script>
-    <!-- /*type="text/javascript"*/ -->
 </footer>
-<!-- <script>
-    // function addSchool(e) {
-    //     console.log("hello from addSchool function")
-    //     var ol = document.getElementById("eduInfoList")
-    //     var li = document.getElementById("eduInfoListEle")
-    //     var newEle = document.createElement(li)
-    //     newEle.setAttribute("")
-    //     ol.appendChild(newEle)
-    // }
-    console.log("running script")
-</script> -->
 
 </html>
