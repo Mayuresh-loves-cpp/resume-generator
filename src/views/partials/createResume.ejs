@@ -23,7 +23,7 @@
         <div class="container">
             <div class="topnav">
                 <a href="/">Home</a>
-                <a href="/createResume">Create Resume</a>
+                <a href="/createResume" id="createResumeHref">Create Resume</a>
                 <a href="/getResume">Get Resume</a>
                 <a href="/about">About</a>
             </div>
@@ -50,8 +50,10 @@
                 </div>
 
                 <div class="name">
-                    <label for="objective">Your Objective</label><input type="text" name="objective" id="objective"
-                        required>
+                    <label for="objective">Your Objective</label>
+                    <!-- <input type="text" name="objective" id="objective" required> -->
+                    <p></p>
+                    <textarea name="objective" id="objective" placeholder="Enter your objective here!" cols="54" rows="10" required></textarea>
                 </div>
 
                 <h2>Your Educational Information</h2>

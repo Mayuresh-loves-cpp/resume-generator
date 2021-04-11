@@ -13,13 +13,18 @@
     position: absolute;
     margin: 20px;
     width: auto;
+    /* padding: 10px; */
+    border-radius: 50px;
+    /* background-color: rgb(194, 194, 194); */
     /* position: fixed; */
+    /* overflow: hidden; */
 }
 
 /* The navbar */
 .topnav {
     overflow: visible;
-    background-color: #333;
+    /* background-color: #333; */
+    /* position: fixed; */
 }
 
 /* Navbar links */
@@ -37,7 +42,13 @@
 .topnav a:hover {
     background-color: #ddd;
     color: black;
+    /* font-size: 35px; */
     border-radius: 50px;
+}
+
+#createResumeHref {
+    background-color: #ddd;
+    /* border-radius: 15px; */
 }
 
 body {
@@ -62,7 +73,7 @@ body {
 }
 
 .name label {
-    padding-right: 20px;
+    /* padding-right: 20px; */
     font-weight: bold;
     /* position: absolute; */
 }
@@ -71,6 +82,7 @@ body {
     align-content: center;
     border: none;
     outline: none;
+    margin-left: 20px;
     border-bottom: 2px solid #464646;
     background-color: rgb(255, 255, 252);
     font-size: 40px;
@@ -100,9 +112,29 @@ body {
     padding-top: 40px;
     padding-bottom: 50px;
     margin-top: 40px;
-    box-shadow: 0 0px 8px 0 rgba(0,0,0,0.08);
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.08);
     background-color: rgb(255, 255, 252);
     border-radius: 15px;
+    box-shadow: #464646;
+}
+
+#objective {
+    resize: none;
+    font-size: 25px;
+    outline: none;
+    border-style: solid;
+    border-radius: 15px;
+    padding: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    border-width: 0px;
+    background-color: #f0f0f0;
+    transition: ease 0.8s;
+}
+
+#objective:hover {
+    background-color: #d8d8d8;
 }
 
 .eduInfo {
@@ -111,7 +143,7 @@ body {
     padding-bottom: 50px;
     padding-left: 55px;
     margin-left: -85px;
-    box-shadow: 0 0px 8px 0 rgba(0,0,0,0.08);
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.08);
     background-color: rgb(255, 255, 252);
     border-radius: 15px;
     transition: ease 0.5s;
@@ -155,7 +187,7 @@ body {
     padding-left: 55px;
     margin-left: -85px;
     margin-top: 110px;
-    box-shadow: 0 0px 8px 0 rgba(0,0,0,0.08);
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.08);
     background-color: rgb(255, 255, 252);
     border-radius: 15px;
     transition: ease 0.5s;
@@ -196,7 +228,7 @@ body {
     padding-left: 55px;
 }
 
-#eduInfoList li{
+#eduInfoList li {
     margin-left: 30px;
     font-weight: bolder;
     font-size: 30px;
@@ -249,7 +281,7 @@ body {
     padding-bottom: 50px;
     padding-left: 30px;
     margin-left: -85px;
-    box-shadow: 0 0px 8px 0 rgba(0,0,0,0.08);
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.08);
     background-color: rgb(255, 255, 252);
     border-radius: 15px;
     font-size: 30px;
@@ -260,7 +292,7 @@ body {
     padding-left: 45px;
 }
 
-.workExp label{
+.workExp label {
     padding-right: 15px;
     font-weight: bolder;
     padding-left: 40px;
