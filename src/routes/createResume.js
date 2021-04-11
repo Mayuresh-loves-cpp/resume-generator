@@ -7,7 +7,6 @@ createRouter.get('', async(req, res) => {
 })
 
 createRouter.get('/addSchool', async(req, res) => {
-    console.log(__dirname)
     res.sendFile("createResume.js", {root:(__dirname) + '../../../public/js/'})
 })
 

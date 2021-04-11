@@ -1,16 +1,16 @@
 var list = document.getElementById("eduInfoList");
+// console.log(list);
 var value = 1;
 var value1 = 1;
 
 var addSchoolBtn = document.getElementById("addSchool");
+
 addSchoolBtn.addEventListener('click', () => {
     console.log('after clicking add button');
     var oldLiStr = 'eduInfo' + value.toString();
     const oldLi = document.getElementById(oldLiStr);
-    oldLi.appendChild(document.createElement('p'));
+    // oldLi.appendChild(document.createElement('p'));
     value += 1;
-    const newLi = document.createElement('li');
-    newLi.id = 'eduInfo' + value.toString();
     const schoolLable = document.createElement("label");
     schoolLable.appendChild(document.createTextNode("University Name"));
     const school = document.createElement("input");
@@ -20,15 +20,30 @@ addSchoolBtn.addEventListener('click', () => {
     degLable.appendChild(document.createTextNode("Degree"));
     const degree = document.createElement("input");
     degree.type = 'text';
-    newLi.appendChild(schoolLable);
-    newLi.appendChild(school);
-    newLi.appendChild(document.createElement('p'));
-    newLi.appendChild(degLable);
-    newLi.appendChild(degree);
-    console.log(schoolLable);
-    console.log(school);
+    const schoolDiv = document.createElement('div');
+    schoolDiv.className = 'eduInfoNew';
+    schoolDiv.appendChild(schoolLable);
+    schoolDiv.appendChild(school);
+    schoolDiv.appendChild(document.createElement('p'));
+    schoolDiv.appendChild(degLable);
+    schoolDiv.appendChild(degree);
+    const degDateLable = document.createElement('label');
+    degDateLable.appendChild(document.createTextNode('When you recived your Degree'));
+    const degInput = document.createElement('input');
+    degInput.type = 'date';
+    degInput.id = 'degYear';
+    const degDiv = document.createElement('div');
+    degDiv.className = 'eduInfo';
+    degDiv.id = 'degYearid';
+    degDiv.appendChild(degDateLable);
+    degDiv.appendChild(degInput);
+    const newLi = document.createElement('li');
+    newLi.id = 'eduInfo' + value.toString();
+    newLi.appendChild(schoolDiv);
+    newLi.appendChild(degDiv);
+    // console.log(schoolLable);
+    // console.log(school);
     list.appendChild(newLi);
-
 })
 
 var addWorkExpBtn = document.getElementById("addWork");
@@ -55,19 +70,46 @@ addWorkExpBtn.addEventListener('click', () => {
     tillDateLable.appendChild(document.createTextNode('Till'));
     const tilldate = document.createElement('input');
     tilldate.type = 'date';
+    const workExpLiDiv = document.createElement('div');
+    workExpLiDiv.className = 'workExp';
+    workExpLiDiv.appendChild(organizationLable);
+    workExpLiDiv.appendChild(organizationInput);
+    workExpLiDiv.appendChild(document.createElement('p'));
+    workExpLiDiv.appendChild(positionLable);
+    workExpLiDiv.appendChild(positionInput);
+    workExpLiDiv.appendChild(document.createElement('p'));
+    workExpLiDiv.appendChild(fromDateLable);
+    workExpLiDiv.appendChild(fromDate);
+    workExpLiDiv.appendChild(document.createElement('p'));
+    workExpLiDiv.appendChild(tillDateLable);
+    workExpLiDiv.appendChild(tilldate);
     const workExpLi = document.createElement('li');
     workExpLi.id = 'workExpEle' + value1.toString();
+    workExpLi.appendChild(workExpLiDiv);
     const workExpList = document.getElementById('workExpList');
-    workExpLi.appendChild(organizationLable);
-    workExpLi.appendChild(organizationInput);
-    workExpLi.appendChild(document.createElement('p'));
-    workExpLi.appendChild(positionLable);
-    workExpLi.appendChild(positionInput);
-    workExpLi.appendChild(document.createElement('p'));
-    workExpLi.appendChild(fromDateLable);
-    workExpLi.appendChild(fromDate);
-    workExpLi.appendChild(document.createElement('p'));
-    workExpLi.appendChild(tillDateLable);
-    workExpLi.appendChild(tilldate);
     workExpList.appendChild(workExpLi);
+})
+
+var removeWorkExpBtn = document.getElementById('removeWork');
+
+removeWorkExpBtn.addEventListener('click', () => {
+    if (value1 > 1) {
+        var lastEleId = 'workExpEle' + value1.toString();
+        var lastEle = document.getElementById(lastEleId);
+        var list = document.getElementById('workExpList');
+        list.removeChild(lastEle);
+        value1 -= 1;
+    }
+})
+
+var removeSchoolBtn = document.getElementById('removeSchool');
+
+removeSchoolBtn.addEventListener('click', () => {
+    if (value > 1) {
+        var lastEleId = 'eduInfo' + value.toString();
+        var lastEle = document.getElementById(lastEleId);
+        var list = document.getElementById('eduInfoList');
+        list.removeChild(lastEle);
+        value -= 1;
+    }
 })

@@ -10,11 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://maxcdn.icons8.com/Share/icon/ios7/Business/open_resume1600.png" type="image/x-icon">
+    <!-- <link rel="icon" href="https://maxcdn.icons8.com/Share/icon/ios7/Business/open_resume1600.png" type="image/x-icon"> -->
+    <link rel="icon"
+        href="https://cdn4.iconfinder.com/data/icons/education-flat-color-vol-3/52/resume__profile__document__job__CV__interview__career-512.png"
+        type="image/x-icon">
 </head>
 
 <body>
-    <!-- importing scripts -->
     <!-- <script src="/createResume/addSchool"></script> -->
     <!-- main structure -->
     <div class="bg-img">
@@ -54,9 +56,9 @@
 
                 <h2>Your Educational Information</h2>
 
-                <div class="eduInfo">
-                    <ol type="1" id="eduInfoList">
-                        <li id="eduInfo1">
+                <ol type="none" id="eduInfoList">
+                    <li id="eduInfo1">
+                        <div class="eduInfo">
                             <label for="university">University Name</label><input type="text" name="university"
                                 id="university" required>
                             <input type="button" value="add" id="addSchool" class="addschool">
@@ -64,22 +66,25 @@
                             <label for="degree" id="edudeg">Degree</label><input type="text" name="degree" id="degree"
                                 required>
                             <input type="button" value="remove" id="removeSchool" class="addschool">
-                        </li>
-                    </ol>
-                    <br>
+                        </div>
+                        <div class="eduInfo" id="degYearid">
+                            <label for="degYear">When you recived your Degree</label><input type="date" name="degYear"
+                                id="degYear" required>
+                        </div>
+                    </li>
+                </ol>
+                <br>
 
-                </div>
-
-                <div class="name">
+                <!-- <div class="name">
                     <label for="degYear">When you recived your Degree</label><input type="date" name="degYear"
                         id="degYear" required>
-                </div>
+                </div> -->
 
                 <h2>Work Experience</h2>
 
-                <div class="workExp">
-                    <ol type="1" id="workExpList">
-                        <li id="workExpEle1">
+                <ol type="1" id="workExpList">
+                    <li id="workExpEle1">
+                        <div class="workExp">
                             <label for="organization">Organization</label><input type="text" name="organization">
                             <input type="button" value="add" id="addWork" class="addWorkExp">
                             <p></p>
@@ -89,9 +94,9 @@
                             <label for="from">From</label><input type="date" name="from">
                             <p></p>
                             <label for="till">Till</label><input type="date" name="till">
-                        </li>
-                    </ol>
-                </div>
+                        </div>
+                    </li>
+                </ol>
 
                 <div class="submitbtn">
                     <input type="submit" value="SAVE INFORMATION" class="btn">
@@ -101,6 +106,7 @@
     </div>
 </body>
 
+<!-- importing scripts -->
 <footer>
     <script src="/createResume/addSchool"></script>
 </footer>
