@@ -31,7 +31,7 @@
     </div>
 
     <div class="pre-form">
-        <form action="createResume.html" onsubmit="alert('Information saved');return false">
+        <form action="/resumes/add" method="POST" id="resumeForm";return false"> <!--onsubmit="alert('Information saved')-->
             <div class="cardbg">
                 <h2>Personal Information</h2>
                 <div class="name">
@@ -53,7 +53,8 @@
                     <label for="objective">Your Objective</label>
                     <!-- <input type="text" name="objective" id="objective" required> -->
                     <p></p>
-                    <textarea name="objective" id="objective" placeholder="Enter your objective here!" cols="54" rows="10" required></textarea>
+                    <textarea name="objective" id="objective" placeholder="Enter your objective here!" cols="54"
+                        rows="10" required></textarea>
                 </div>
 
                 <h2>Your Educational Information</h2>
@@ -101,7 +102,7 @@
                 </ol>
 
                 <div class="submitbtn">
-                    <input type="submit" value="SAVE INFORMATION" class="btn">
+                    <input type="submit" id="submitResume" value="SAVE INFORMATION" class="btn">
                 </div>
             </div>
         </form>

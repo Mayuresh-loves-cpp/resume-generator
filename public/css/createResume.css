@@ -36,7 +36,7 @@
     text-decoration: none;
     font-size: 25px;
     font-weight: 900;
-    transition: ease-out 0.3s;
+    transition: ease-in-out 0.3s;
 }
 
 .topnav a:hover {
@@ -47,8 +47,21 @@
 }
 
 #createResumeHref {
-    background-color: #ddd;
+    background-color: #f7ffa0;
+    border-radius: 30px;
+    /* background-color: #ddd; */
     /* border-radius: 15px; */
+    transition: ease-in-out 0.3s;
+}
+
+#createResumeHref:hover {
+    background-color: #ddd;
+    border-radius: 50px;
+}
+
+#createResumeHref:active {
+    background-color: #ddd;
+    /* transition: ease-in-out 0.2s; */
 }
 
 body {

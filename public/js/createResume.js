@@ -113,3 +113,61 @@ removeSchoolBtn.addEventListener('click', () => {
         value -= 1;
     }
 })
+
+var resumeForm = document.getElementById('resumeForm');
+
+resumeForm.addEventListener("submit", handleFormSubmit);
+
+async function handleFormSubmit() {
+    var result = await getAndSubmitForm(event);
+    console.log(result);
+}
+
+async function getAndSubmitForm(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const url = form.action;
+    try {
+        const formData = new FormData(form);
+        var data = {
+            personalInfo: {
+                name: {
+                    firstName: formData.get('firstName'),
+                    lastName: formData.get('lastName'),
+                },
+                emailID: formData.get('emailID'),
+                phone: formData.get('phoneNum'),
+                objective: formData.get('objective'),
+            },
+            educationalInfo: [{
+                university: formData.get('university'),
+                degree: formData.get('degree'),
+                degreeDate: formData.get('degYear'),
+            }],
+            workExperience: [{
+                organization: formData.get('organization'),
+                position: formData.get('position'),
+                fromDate: formData.get('from'),
+                tillDate: formData.get('till'),
+            }]
+        }
+        console.log(data);
+        const formDataJsonString = JSON.stringify(data);
+        const fetchOptions = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: formDataJsonString,
+        };
+        const response = await fetch(url, fetchOptions);
+        if (!response.ok) {
+            const errorMessage = await response.text();
+            throw new Error(errorMessage);
+        }
+        return response.json();
+    } catch (error) {
+        console.error(error);
+    }
+}
