@@ -3,6 +3,14 @@ var list = document.getElementById("eduInfoList");
 var value = 1;
 var value1 = 1;
 
+function getWorkExp(form) {
+    var list = [];
+    for (let i = 1; i <= value1; i++) {
+        list.push(form.get('workExpEle' + i.toString()));
+    }
+    return list;
+}
+
 var addSchoolBtn = document.getElementById("addSchool");
 
 addSchoolBtn.addEventListener('click', () => {
@@ -121,6 +129,9 @@ resumeForm.addEventListener("submit", handleFormSubmit);
 async function handleFormSubmit() {
     var result = await getAndSubmitForm(event);
     console.log(result);
+    if (result.success == true) {
+        window.prompt("data stored!");
+    }
 }
 
 async function getAndSubmitForm(event) {
@@ -129,6 +140,7 @@ async function getAndSubmitForm(event) {
     const url = form.action;
     try {
         const formData = new FormData(form);
+        const workexp = getWorkExp(formData);
         var data = {
             personalInfo: {
                 name: {
@@ -144,12 +156,13 @@ async function getAndSubmitForm(event) {
                 degree: formData.get('degree'),
                 degreeDate: formData.get('degYear'),
             }],
-            workExperience: [{
-                organization: formData.get('organization'),
-                position: formData.get('position'),
-                fromDate: formData.get('from'),
-                tillDate: formData.get('till'),
-            }]
+            // workExperience: [{
+            //     organization: formData.get('organization'),
+            //     position: formData.get('position'),
+            //     fromDate: formData.get('from'),
+            //     tillDate: formData.get('till'),
+            // }]
+            workExperience: workexp,
         }
         console.log(data);
         const formDataJsonString = JSON.stringify(data);
