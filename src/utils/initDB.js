@@ -1,9 +1,13 @@
 // importing mongoose
 const mongoose = require("mongoose"); // database URIs
 
+// local vars
+const yourDBname = ''  // <-- please insert your db name inside this string
+const LOCAL_DB_URI = 'mongodb://localhost:27017/' + yourDBname
+
 // connecting to database
 mongoose
-    .connect(process.env.MAIN_DB_URI, {
+    .connect(process.env.MAIN_DB_URI || LOCAL_DB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
