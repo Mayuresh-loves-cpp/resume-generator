@@ -8,6 +8,7 @@ function getWorkExp(form) {
     for (let i = 1; i <= value1; i++) {
         list.push(form.get('workExpEle' + i.toString()));
     }
+    console.log('work exp list: ', list)
     return list;
 }
 
@@ -129,8 +130,14 @@ resumeForm.addEventListener("submit", handleFormSubmit);
 async function handleFormSubmit() {
     var result = await getAndSubmitForm(event);
     console.log(result);
-    if (result.success == true) {
-        window.prompt("data stored!");
+    if (result) {
+        if (result.success == true) {
+            window.alert("data stored!");
+        } else {
+            window.alert("unable to store resume data!");
+        }
+    } else {
+        window.prompt("Network Error!");
     }
 }
 
