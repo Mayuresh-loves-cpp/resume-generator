@@ -30,8 +30,9 @@
         </div>
     </div>
 
-    <div class="pre-form">
-        <form action="/resumes/add" method="POST" id="resumeForm";return false"> <!--onsubmit="alert('Information saved')-->
+    <div class="pre-form" id="pre-form">
+        <form action="/resumes/add" method="POST" id="resumeForm" ;return false">
+            <!--onsubmit="alert('Information saved')-->
             <div class="cardbg">
                 <h2>Personal Information</h2>
                 <div class="name">
@@ -78,11 +79,6 @@
                 </ol>
                 <br>
 
-                <!-- <div class="name">
-                    <label for="degYear">When you recived your Degree</label><input type="date" name="degYear"
-                        id="degYear" required>
-                </div> -->
-
                 <h2>Work Experience</h2>
 
                 <ol type="1" id="workExpList">
@@ -107,6 +103,13 @@
             </div>
         </form>
     </div>
+
+    <div class="alertInside" id="alert" hidden>
+        <h1 id="alertText">This is hidden text</h1>
+        <input type="button" value="done" onclick="hideAlert()" class="btn">
+    </div>
+
+    <input type="button" value="click" onclick="hideAlert1()" hidden>
 </body>
 
 <!-- importing scripts -->

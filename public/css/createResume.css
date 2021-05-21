@@ -17,7 +17,8 @@
     border-radius: 50px;
     /* background-color: rgb(194, 194, 194); */
     /* position: fixed; */
-    /* overflow: hidden; */
+    /* overflow: visible; */
+    /* background-color: #d8d8d8; */
 }
 
 /* The navbar */
@@ -25,6 +26,7 @@
     overflow: visible;
     /* background-color: #333; */
     /* position: fixed; */
+    
 }
 
 /* Navbar links */
@@ -125,10 +127,10 @@ body {
     padding-top: 40px;
     padding-bottom: 50px;
     margin-top: 40px;
-    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.10);
     background-color: rgb(255, 255, 252);
     border-radius: 15px;
-    box-shadow: #464646;
+    /* box-shadow: #464646; */
 }
 
 #objective {
@@ -402,4 +404,26 @@ body {
     box-shadow: inset 300px 0 0 0 #f4ff8f;
     cursor: pointer;
     color: rgb(0, 0, 0);
+}
+
+.alertInside {
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.10);
+    background-color: rgb(202, 202, 202);
+    top: 30%;
+    left: 26%;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    position: fixed;
+    border-radius: 15px;
+    opacity: 1;
+    /* transition-property: all; */
+    transform: scale(1, 1);
+    transition: transform 400ms ease-in-out 0ms, opacity 200ms ease-out 0ms;
+}
+
+.alertInside.hide {
+    opacity: 0;
+    transform: scale(0, 0);
+    transition: transform 400ms ease-in-out 0ms, opacity 100ms ease-out 0ms;
+    /* transition: opacity 400ms ease-out 500ms; */
 }

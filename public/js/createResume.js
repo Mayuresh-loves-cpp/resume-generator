@@ -123,6 +123,9 @@ removeSchoolBtn.addEventListener('click', () => {
     }
 })
 
+const alertWindow = document.getElementById('alert');
+alertWindow.hidden = false;
+alertWindow.classList.add("hide");
 var resumeForm = document.getElementById('resumeForm');
 
 resumeForm.addEventListener("submit", handleFormSubmit);
@@ -130,15 +133,23 @@ resumeForm.addEventListener("submit", handleFormSubmit);
 async function handleFormSubmit() {
     var result = await getAndSubmitForm(event);
     console.log(result);
+    document.getElementById('alert').hidden = false;
+    // document.getElementById('pre-form').style.opacity = 40;
+    // alertWindow.hidden = false;
+    document.getElementById('pre-form').style.opacity = '0.5';
     if (result) {
         if (result.success == true) {
-            window.alert("data stored!");
+            document.getElementById('alertText').innerHTML = 'Information Saved!';
+            alertWindow.classList.remove("hide");
         } else {
-            window.alert("unable to store resume data!");
+            document.getElementById('alertText').innerHTML = 'Unable to save Information!';
+            alertWindow.classList.remove("hide");
         }
     } else {
-        window.prompt("Network Error!");
+        document.getElementById('alertText').innerHTML = 'Network Error!';
+        alertWindow.classList.remove("hide");
     }
+
 }
 
 async function getAndSubmitForm(event) {
@@ -190,4 +201,19 @@ async function getAndSubmitForm(event) {
     } catch (error) {
         console.error(error);
     }
+}
+
+function hideAlert() {
+    if (alertWindow.classList.contains("hide")) {
+        alertWindow.classList.remove("hide");
+    } else {
+        alertWindow.classList.add("hide");
+    }
+    document.getElementById('pre-form').style.opacity = '1';
+}
+
+function hideAlert1() {
+    document.getElementById('alert').hidden = false;
+    document.getElementById('pre-form').style.opacity = '0.5';
+    alertWindow.classList.remove("hide");
 }
