@@ -1,4 +1,4 @@
-# resume-generator
+# Resume Generator
 Resume generator made using Node.js and ejs.
 
 >Requires Node.js to be installed.
