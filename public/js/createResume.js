@@ -6,6 +6,8 @@ var value1 = 1;
 function getWorkExp(form) {
     var list = [];
     for (let i = 1; i <= value1; i++) {
+        console.log('getting workExpEle' + i.toString());
+        console.log(form.get('workExpEle' + i.toString()));
         list.push(form.get('workExpEle' + i.toString()));
     }
     console.log('work exp list: ', list)

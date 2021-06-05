@@ -11,7 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="icon" href="https://maxcdn.icons8.com/Share/icon/ios7/Business/open_resume1600.png" type="image/x-icon"> -->
-    <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/education-flat-color-vol-3/52/resume__profile__document__job__CV__interview__career-512.png" type="image/x-icon">
+    <link rel="icon"
+        href="https://cdn4.iconfinder.com/data/icons/education-flat-color-vol-3/52/resume__profile__document__job__CV__interview__career-512.png"
+        type="image/x-icon">
 </head>
 
 <body>
@@ -25,7 +27,26 @@
             </div>
         </div>
     </div>
-
+    <div class="authbutton">
+        <button id="loginbtn">Login</button>
+        <button id="signupbtn">Sign Up</button>
+    </div>
+    <div id="loginDiv" class="loginSignup" hidden>
+        <h1>
+            Login
+        </h1>
+        <button onclick="closelogin()" class="btn">Login</button>
+    </div>
+    <div id="signupDiv" class="loginSignup" hidden>
+        <h1>
+            Sign Up
+        </h1>
+        <button onclick="closesignup()" class="btn">Sign Up</button>
+    </div>
 </body>
+
+<footer>
+    <script src="/indexjs"></script>
+</footer>
 
 </html>

@@ -2,7 +2,7 @@
     /* The image used */
     /* background-image: url("http://3.bp.blogspot.com/-1a0jgkP4wPc/UGmoLNT3ViI/AAAAAAAACbU/Mic6FhbA2bA/s1600/ForestWaterfall-long+goodbye.png"); */
 
-    min-height: 380px;
+    /* min-height: 380px; */
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -48,4 +48,74 @@ body {
     font-family: 'Source Code Pro', monospace;
     height: 1700px;
     background-image: linear-gradient(0deg, rgb(186, 186, 186), rgb(255, 255, 255));
+}
+
+.loginSignup {
+    position: fixed;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.20);
+    background-color: rgb(202, 202, 202);
+    top: 20%;
+    bottom: 20%;
+    left: 30%;
+    right: 30%;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    position: fixed;
+    border-radius: 15px;
+    opacity: 1;
+    /* transition-property: all; */
+    transform: scale(1, 1);
+    transition: transform 400ms ease-in-out 0ms, opacity 200ms ease-out 0ms;
+}
+
+.loginSignup.hide {
+    opacity: 0;
+    transform: scale(0, 0);
+    transition: transform 400ms ease-in-out 0ms, opacity 100ms ease-out 0ms;
+}
+
+.authbutton {
+    position: fixed;
+    left: 82.5%;
+    top: 4%;
+}
+
+.authbutton button {
+    /* padding: 10px 10px 10px 10px; */
+    color: #474747;
+    padding: 14px 16px;
+    font-size: 25px;
+    outline: none;
+    border: none;
+    background-color: inherit;
+    transition: ease-out 0.3s;
+}
+
+.authbutton button:hover {
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.btn {
+    width: 280px;
+    height: 60px;
+    border: none;
+    color: #000000;
+    background-color: dfe6e9;
+    border-radius: 50px;
+    box-shadow: inset 0 0 0 0 #ffffff;
+    transition: ease-out 0.3s;
+    font-size: 25px;
+    font-weight: bolder;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.btn:hover {
+    box-shadow: inset 300px 0 0 0 #f4ff8f;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
 }
